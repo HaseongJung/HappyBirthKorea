@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #f8e0e0;
+    margin: 0;
+    font-family:Frank Ruhl Libre, 'Noto Sans KR', sans-serif;
+    color: black;
+    z-index: 0;
+    line-height: 2.5em;
+}
+.section {
+    background-attachment: fixed;
+    background-position: top left;
+    text-align: center;
+}
+video {
+    background-color: white;
+    right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100%; min-height: 100%;
+    z-index: -100;
+    background-size: cover;
+    bottom: 0;
+}
+header {
+    opacity: 1;
+    width: 100%;
+    height: 6%;
+    bottom: 0;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
+    */
+}
+header:hover {
+    background-color: #f8e0e0;
+}
+#logo {
+    height: 100%;
+    width: 22%;
+    min-width: 350px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+#logo > img {
+    height: 100%;
+    margin: 0 5px;
+    padding: 0 1em;
+    z-index: 3;
+}
+#menu{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+#menu > li {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding: 0px 10px;
+}
+#menu > li > button {
+    width: 100%;
+    min-width: 60px;
+    height: 100%;
+    border: 0;
+    color: black;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: large;
+    /*
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
+    */
+    z-index: 3;
+}
+#menu > li > button:hover, #logo:hover{
+    cursor: pointer;
+}
+#menu li:after, #menu li:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    bottom: 0;
+    display: block;
+    height: 1px;
+    transition: all 0.3s ease;
+    margin-top: 2px;
+    transition: all 300ms ease-in;
+}
+
+#menu li:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    display: block;
+    transition: all 0.3s ease;
+    width: 0%;
+}
+#menu li:hover::after {
+    width: 82%;
+    bottom: 0;
+    height: 4px;
+    background-color: #848CB5;
+}
+#slide1, #slide2, #slide3, #slid4, #slide5 {
+    width: 100vw;
+    height: 100%;
+    text-align: center;
+}
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 95%;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    height: 5%;
+    margin: 0.5% 0 3% 0;
+    vertical-align: middle;
+    font-size: x-large;
+    line-height: 4.5em;
+}
+.header > h1 {
+    font-size: 2em;
+}
+.item h2 {
+    font-size: 1.8em;
+    margin-bottom: 5%;
+}
+.main {
+    bottom: 0;
+    height: 85%;    
+    display: flex;
+    justify-content: space-evenly;
+}
+.poster, .text {
+    width: 40%;
+    font-weight: 600s;
+    font-size: large;
+}
+.text {
+    filter: drop-shadow(5px 5px 5px #000);
+    border-radius: 1.5em 1.5em 1.5em;
+    background-color: white;
+    margin-top: 4em;
+    height: 80%;
+    border: 5px solid #9999CC;
+    padding: 2em;
+}
+.poster img {
+    filter: drop-shadow(5px 5px 5px #000);
+    height: 90%;
+    margin: auto 0;
+    border-radius: 0.5em 0.5em 0.5em;
+    margin-top: 5%;
+}
+#slide7 img {
+    height: 90%;
+    margin-top: 2em;
+}
+.text p {
+    margin: 3.5% auto;
+    width: 90%;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: justify;
+    vertical-align: middle;
+    margin-top: 5%;;
+}
+#slide8  .text  p {
+    line-height: 1.9em;
+    vertical-align: middle;
+}
+#slide3 img, #slide4 img {
+    border-radius: 1.5em 1.5em 1.5em;
+    background-color: white;
+    border: 5px solid #9999CC;
+    height: 90%;
+    margin: auto 0;
+}
+.main > .item {
+    border-radius: 1.5em 1.5em 1.5em;
+    height: 90%;
+    width: 40%; 
+    background-color:rgb(255, 255, 255);
+    border: 5px solid #9999CC;
+    padding: 2% 2%;
+    margin-top: 2em;
+}
+.item  img {
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+.item p {
+    text-align: justify;
+    font-weight: 600;
+}
+.item button {
+    position: absolute;
+    right: 23%;
+    bottom: 10%;
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 0.8em 0.8em 0.8em;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.item button:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+#slide5 > video {
+    height: 100vh;
+    background-color: black;
+}
+#slide6 .item img {
+    margin: 0;
+}
+#slide9 .main, #slide10 .main, #slide11 .main, #slide12 .main {
+    justify-content: space-between;
+}
+#slide9 .poster {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 10%;
+}
+#slide9 .poster img {
+    width: 70%;
+    padding: 0 4%;
+    height: 90%;
+}
+#slide9 .text {
+    width: 33%;
+    margin-right: 5%;
+}
+#slide10 .poster, #slide11 .poster, #slide12 .poster{
+    margin-top: 2%;
+    margin-left: 4%;
+}
+#slide10 .poster img, #slide11 .poster img, #slide12 .poster img {
+    margin-top: 2%;
+    width: 130%;
+    height: 80%;
+}
+#slide10 .poster p, #slide10 .poster h2, #slide11 .poster p, #slide11 .poster h2 {
+    width: 130%;
+}
+#slide10 .text, #slide11 .text, #slide12 .text {
+    width: 36%;
+    margin-right: 4%;
+}
+#slide10 .text p {
+    vertical-align: middle;
+    
+}
+#slide12 .poster {
+    margin-top: 3%;
+    margin-left: 6%;
+}
+#slide12 .text {
+    margin-right: 6%;
+}
+#slide12 .poster img {
+    width: 110%;
+}
+#slide12 .poster p, #slide12 .poster h2 {
+    width: 110%;
+}
+#sc4 {
+    background-image: url("media/donate.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#sc4 > div {
+    position: absolute;
+    width: 100vw;
+    height: 97%;
+    bottom: -1.3em;
+}
+#sc4 > div img {
+    height: 100%;
+}
+.text p {
+    height: 100%;
+    overflow: auto;
+    margin: 0 auto;
+    font-size: 1em;
+}   
+.item p {
+    font-size: 1em;
+}
+#slide6 .item p {
+    height: 30%;
+    overflow: auto;
+    position: relative;
+}
+#slide11 .text p {
+    height: 90%;
+}
+@media screen and (max-aspect-ratio: 1536/864) {
+    #background_video {
+        width: auto;
+        height: 100vh;
+     }
+ }
